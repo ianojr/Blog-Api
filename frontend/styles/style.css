@@ -1,0 +1,248 @@
+/* General Styling
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* Navbar Customization */
+
+/*
+.navbar-brand {
+    font-size: 1.8rem;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    font-weight: bold;
+} */
+
+/* --- Option 1: Sleek & Minimalist Navbar --- */
+.navbar-modern-1 {
+    background-color: #212529 !important; /* Dark charcoal */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Subtle bottom border */
+}
+
+.navbar-modern-1 .navbar-brand {
+    font-family: 'Montserrat', sans-serif; /* Modern sans-serif font */
+    font-size: 1.8rem;
+    font-weight: 700; /* Bolder for impact */
+    color: #e9ecef !important; /* Lighter grey for brand */
+    text-shadow: none; /* Remove previous text shadow */
+}
+
+.navbar-modern-1 .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important; /* Slightly subdued white */
+    padding: 0.7rem 1rem;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-modern-1 .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.navbar-modern-1 .navbar-nav .nav-link.active {
+    color: #007bff !important; /* A pop of blue for active */
+    font-weight: bold;
+}
+
+/* Underline effect on hover */
+.navbar-modern-1 .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #007bff; /* Blue underline */
+    transition: width 0.3s ease;
+}
+
+.navbar-modern-1 .navbar-nav .nav-link:hover::after {
+    width: 80%; /* Expand underline on hover */
+}
+
+.navbar-modern-1 .form-control {
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.navbar-modern-1 .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-modern-1 .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+.navbar-modern-1 .btn-outline-light {
+    border-color: #007bff;
+    color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.navbar-modern-1 .btn-outline-light:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+}
+
+/* Adjust dropdown menu for dark theme */
+.navbar-modern-1 .dropdown-menu {
+    background-color: #2c3135; /* Slightly lighter dark */
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-modern-1 .dropdown-item {
+    color: #e9ecef;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar-modern-1 .dropdown-item:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.navbar-modern-1 .dropdown-divider {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .navbar-modern-1 .navbar-collapse {
+        background-color: #212529; /* Keep background dark on collapse */
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+.btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #343a40;
+}
+
+/* Hero Section (Carousel) */
+.hero-section .carousel-item img {
+    height: 70vh; /* Adjusted for better view on various screens */
+    object-fit: cover;
+    filter: brightness(0.8); /* Slightly darkens image for text readability */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border-radius: 8px;
+    padding: 1.5rem;
+    backdrop-filter: blur(5px); /* Adds a slight blur effect */
+}
+
+.carousel-caption h5 {
+    font-size: 3.5rem; /* Larger title */
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #e9ecef;
+}
+
+/* Blog Post Section */
+.blog-posts h1 {
+    color: #007bff; /* Primary blue for the heading */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.blog-posts .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures rounded corners on image */
+}
+
+.blog-posts .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blog-posts .card-img-top {
+    height: 200px; /* Fixed height for consistent image size */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.blog-posts .card-body {
+    padding: 1.5rem;
+}
+
+.blog-posts .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 0.75rem;
+}
+
+.blog-posts .card-text {
+    font-size: 0.95rem;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.blog-posts .card-footer {
+    background-color: #f1f1f1;
+    border-top: 1px solid #e9ecef;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #212529 !important; /* Darker footer */
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .hero-section .carousel-item img {
+        height: 50vh;
+    }
+}
